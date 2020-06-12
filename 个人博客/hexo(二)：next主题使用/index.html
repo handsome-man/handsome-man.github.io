@@ -93,8 +93,9 @@
 <meta property="og:site_name" content="llnpython">
 <meta property="og:description" content="1.next主题安装进入博客目录,然后从Github克隆到themes&#x2F;next 12cd llnpythongit clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next  编辑主配置文件blog&#x2F;_config.yml选择next主题  添加分类和标签创建“标签”选项生成“">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5312266-0934c352ffd7d783.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/94/format/web">
-<meta property="article:published_time" content="2020-06-08T16:41:18.467Z">
-<meta property="article:modified_time" content="2020-06-08T16:41:18.472Z">
+<meta property="og:image" content="http://qbt5sd2vm.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-06-12%20%E4%B8%8B%E5%8D%885.54.47.png">
+<meta property="article:published_time" content="2020-06-12T10:05:51.255Z">
+<meta property="article:modified_time" content="2020-06-12T10:05:51.255Z">
 <meta property="article:author" content="liulunan">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="个人博客">
@@ -337,8 +338,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-09T00:41:18+08:00">
-                2020-06-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-12T18:05:51+08:00">
+                2020-06-12
               </time>
             
 
@@ -442,7 +443,11 @@
 <p>具体实现方法:</p>
 <p>修改模板 /themes/next/layout/_macro/post.swig，搜索 rel=”tag”&gt;#，将 # 换成</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;i class&#x3D;&quot;fa fa-tag&quot;&gt;&lt;&#x2F;i&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="代码块添加复制功能"><a href="#代码块添加复制功能" class="headerlink" title="代码块添加复制功能"></a>代码块添加复制功能</h2><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h4 id="问题一：next主题侧边栏日志出现问题"><a href="#问题一：next主题侧边栏日志出现问题" class="headerlink" title="问题一：next主题侧边栏日志出现问题"></a>问题一：next主题侧边栏日志出现问题</h4><p>问题：日志出现Cannot GET /archives/%7C%7C%20list/问题</p>
+<h2 id="代码块添加复制功能"><a href="#代码块添加复制功能" class="headerlink" title="代码块添加复制功能"></a>代码块添加复制功能</h2><h2 id="博客加上萌萌的"><a href="#博客加上萌萌的" class="headerlink" title="博客加上萌萌的"></a>博客加上萌萌的</h2><p>效果如下图<br><img src="http://qbt5sd2vm.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-06-12%20%E4%B8%8B%E5%8D%885.54.47.png" alt=""></p>
+<p>首先安装插件，根目录命令行输入npm install –save hexo-helper-live2d</p>
+<p>主题配置文件最下方添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># Live2D</span><br><span class="line">## https:&#x2F;&#x2F;github.com&#x2F;xiazeyu&#x2F;live2d-widget.js</span><br><span class="line">## https:&#x2F;&#x2F;l2dwidget.js.org&#x2F;docs&#x2F;class&#x2F;src&#x2F;index.js~L2Dwidget.html#instance-method-init</span><br><span class="line">live2d:</span><br><span class="line">  model:</span><br><span class="line">    scale: 1</span><br><span class="line">    hHeadPos: 0.5</span><br><span class="line">    vHeadPos: 0.618</span><br><span class="line">  display:</span><br><span class="line">    superSample: 2</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">    position: right</span><br><span class="line">    hOffset: 0</span><br><span class="line">    vOffset: -20</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br><span class="line">    scale: 0.5</span><br><span class="line">  react:</span><br><span class="line">    opacityDefault: 0.7</span><br><span class="line">    opacityOnHover: 0.2</span><br></pre></td></tr></table></figure>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h4 id="问题一：next主题侧边栏日志出现问题"><a href="#问题一：next主题侧边栏日志出现问题" class="headerlink" title="问题一：next主题侧边栏日志出现问题"></a>问题一：next主题侧边栏日志出现问题</h4><p>问题：日志出现Cannot GET /archives/%7C%7C%20list/问题</p>
 <p>解决方法：</p>
 <p>/layout/_macro/sidebar.swig文件中找到</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;&#123;&#123; url_for(theme.menu.archives).split(&#39;||&#39;)[0] | trim &#125;&#125;&quot;&gt;</span><br></pre></td></tr></table></figure>
@@ -552,8 +557,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/hexo(%E4%B8%89)%EF%BC%9A%E6%B7%BB%E5%8A%A0valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" rel="next" title="hexo(三)：添加valine评论系统">
-                <i class="fa fa-chevron-left"></i> hexo(三)：添加valine评论系统
+              <a href="/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9A%E7%B4%A2%E5%BC%95/" rel="next" title="数据库：索引">
+                <i class="fa fa-chevron-left"></i> 数据库：索引
               </a>
             
           </div>
@@ -561,10 +566,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9A%E7%B4%A2%E5%BC%95/" rel="prev" title="数据库：索引">
-                数据库：索引 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -725,7 +726,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-next主题安装"><span class="nav-text">1.next主题安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加分类和标签"><span class="nav-text">添加分类和标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建“标签”选项"><span class="nav-text">创建“标签”选项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生成“标签”页并添加tpye属性"><span class="nav-text">生成“标签”页并添加tpye属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#给文章添加“tags”属性"><span class="nav-text">给文章添加“tags”属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章置顶功能"><span class="nav-text">文章置顶功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加点击爱心效果"><span class="nav-text">添加点击爱心效果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建js文件"><span class="nav-text">创建js文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改-layout-swig"><span class="nav-text">修改_layout.swig</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章底部的那个带-号的标签"><span class="nav-text">修改文章底部的那个带#号的标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块添加复制功能"><span class="nav-text">代码块添加复制功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题一：next主题侧边栏日志出现问题"><span class="nav-text">问题一：next主题侧边栏日志出现问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题二：Hexo-Next主题访问慢"><span class="nav-text">问题二：Hexo Next主题访问慢</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-next主题安装"><span class="nav-text">1.next主题安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加分类和标签"><span class="nav-text">添加分类和标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建“标签”选项"><span class="nav-text">创建“标签”选项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生成“标签”页并添加tpye属性"><span class="nav-text">生成“标签”页并添加tpye属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#给文章添加“tags”属性"><span class="nav-text">给文章添加“tags”属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章置顶功能"><span class="nav-text">文章置顶功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加点击爱心效果"><span class="nav-text">添加点击爱心效果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建js文件"><span class="nav-text">创建js文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改-layout-swig"><span class="nav-text">修改_layout.swig</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改文章底部的那个带-号的标签"><span class="nav-text">修改文章底部的那个带#号的标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码块添加复制功能"><span class="nav-text">代码块添加复制功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客加上萌萌的"><span class="nav-text">博客加上萌萌的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题"><span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题一：next主题侧边栏日志出现问题"><span class="nav-text">问题一：next主题侧边栏日志出现问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题二：Hexo-Next主题访问慢"><span class="nav-text">问题二：Hexo Next主题访问慢</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
