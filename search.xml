@@ -67,8 +67,14 @@
       </tags>
   </entry>
   <entry>
+    <title>02-数据库/mysql/0-git</title>
+    <url>/02-%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/0-git/</url>
+    <content><![CDATA[<p>0-git.md<br>2-git修改已提交的commit注释.md<br>1-使用git stash命令保存和恢复进度.md</p>
+]]></content>
+  </entry>
+  <entry>
     <title>数据库：索引</title>
-    <url>/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9A%E7%B4%A2%E5%BC%95/</url>
+    <url>/02-%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%9A%E7%B4%A2%E5%BC%95/</url>
     <content><![CDATA[<h2 id="索引的作用"><a href="#索引的作用" class="headerlink" title="索引的作用"></a>索引的作用</h2><ul>
 <li>提高查询速度</li>
 <li>可以加速表与表之间的连接</li>
@@ -170,8 +176,8 @@
       </tags>
   </entry>
   <entry>
-    <title>python/loads_dumps</title>
-    <url>/python/loads_dumps/</url>
+    <title>01-python/loads_dumps</title>
+    <url>/01-python/loads_dumps/</url>
     <content><![CDATA[<hr>
 <p>title: loads_dumps应用<br>date: 2020-06-06 16:16:57<br>categories: </p>
 <ul>
