@@ -1999,7 +1999,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff64e;
+  background: #ac2af4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2785,7 +2785,7 @@ pre .javascript .function {
   width: 240px;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-  border-radius: 15px 15px 15px 15px;
+  border-radius: initial;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -2845,7 +2845,7 @@ pre .javascript .function {
   background: #fff;
   min-height: 700px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-  border-radius: 15px 15px 15px 15px;
+  border-radius: initial;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
@@ -3026,7 +3026,7 @@ pre .javascript .function {
   color: #555;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  border-radius: 15px;
+  border-radius: initial;
   opacity: 0;
 }
 .sidebar-inner.affix {
@@ -3162,12 +3162,12 @@ pre .javascript .function {
   padding: 40px;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-  border-radius: 15px 15px 15px 15px;
+  border-radius: initial;
 }
 #posts > article + article .post-block {
   margin-top: 12px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  border-radius: 15px;
+  border-radius: initial;
 }
 .comments {
   padding: 40px;
@@ -3175,7 +3175,7 @@ pre .javascript .function {
   margin-top: 12px;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  border-radius: 15px;
+  border-radius: initial;
 }
 .posts-expand {
   padding-top: initial;
@@ -3195,7 +3195,7 @@ pre .javascript .function {
   border-top: initial;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-  border-radius: 15px;
+  border-radius: initial;
   padding: 10px 0 10px;
 }
 .pagination .prev,
@@ -3254,7 +3254,7 @@ pre .javascript .function {
   .post-block {
     padding: 20px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-    border-radius: 15px;
+    border-radius: initial;
   }
   #posts > article + article .post-block {
     margin-top: 10px;
@@ -3284,7 +3284,7 @@ pre .javascript .function {
     padding: 12px;
     min-height: auto;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
-    border-radius: 15px;
+    border-radius: initial;
   }
   #posts > article + article .post-block {
     margin-top: 8px;
