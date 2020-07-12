@@ -67,6 +67,122 @@
       </tags>
   </entry>
   <entry>
+    <title>git(二)：gitlab的使用</title>
+    <url>/05-git/gitlab/</url>
+    <content><![CDATA[<h2 id="1-gitlab注册"><a href="#1-gitlab注册" class="headerlink" title="1.gitlab注册"></a>1.gitlab注册</h2><p>注册网址:<a href="https://about.gitlab.com" target="_blank" rel="noopener">https://about.gitlab.com</a></p>
+<p>在注册GitLab的时候总是报错,报错信息如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">There was an error with the reCAPTCHA. Please solve the reCAPTCHA again.</span><br></pre></td></tr></table></figure>
+
+<p>错误原因：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">注册时有一个google的验证码需要输入,但是中国无法访问google,因此无法访问并输入该验证码导致。</span><br></pre></td></tr></table></figure>
+
+<p>解决方案：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用GitHub账号注册，没有的话去注册个github账号</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-创建一个项目"><a href="#2-创建一个项目" class="headerlink" title="2.创建一个项目"></a>2.创建一个项目</h2><ol>
+<li>创建Groups</li>
+</ol>
+<p>Groups ———&gt; New Groups</p>
+<p>填写分组名 ——&gt;选中private ——-&gt; create group</p>
+<ol start="2">
+<li>创建Project</li>
+</ol>
+<p>Projects ——&gt; Your projects ——&gt; Create a project</p>
+<p>填写项目信息 ——&gt; private ——&gt; 勾选readme一项 ——-&gt; Create project</p>
+<h2 id="3-SSH-Keys配置"><a href="#3-SSH-Keys配置" class="headerlink" title="3.SSH Keys配置"></a>3.SSH Keys配置</h2><ol>
+<li>首先要先用自己的电脑生成公钥私钥</li>
+</ol>
+<p>终端输入：ssh-keygen -t rsa - C 自己的邮箱号,一直按enter即可</p>
+<ol start="2">
+<li>把公钥私钥添加SSH Keys</li>
+</ol>
+<p>打开Finder同时按command+shift+G 输入：~/.ssh 进入.ssh文件，打开复制id_rsa.pub到Profile Settings添加SSH Keys，然后添加</p>
+<h2 id="4-首次拉取代码"><a href="#4-首次拉取代码" class="headerlink" title="4.首次拉取代码"></a>4.首次拉取代码</h2><p>由于我是github账号登录的，所以要先设置密码。</p>
+<h4 id="4-1-git"><a href="#4-1-git" class="headerlink" title="4.1 git"></a>4.1 git</h4><p>项目内容获取主要使用git客户端工具来实现，项目开发人员首先要在本机安装git客户端软件，<a href="https://www.git-scm.com/" target="_blank" rel="noopener">下载地址</a></p>
+<h4 id="4-2首次拉取代码"><a href="#4-2首次拉取代码" class="headerlink" title="4.2首次拉取代码"></a>4.2首次拉取代码</h4><p>此间会提示输入帐号密码，帐号是username不是name，按提示输入即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#注意地址是fork后的项目地址</span><br><span class="line">git clone https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-gitflow的使用"><a href="#5-gitflow的使用" class="headerlink" title="5.gitflow的使用"></a>5.gitflow的使用</h2><p>git flow是git的辅助工具，实质上是一些分支-合并的脚本集合，使用git flow可以更轻松的完成对各种特性分支的操作。</p>
+<h4 id="5-1-分支说明"><a href="#5-1-分支说明" class="headerlink" title="5.1 分支说明"></a>5.1 分支说明</h4><ul>
+<li>master分支：存储正式发布的产品，master分支上的产品要求随时处于可部署状态。master分支只能通过与其他分支合并来更新内容，禁止直接在master分支进行修改</li>
+<li>develop分支：汇总开发者完成的工作成果，develop分支上的产品可以是缺失功能模块的半成品，但是已有的功能模块不能是半成品。develop分支只能通过与其他分支合并来更新内容，禁止直接在develop分支进行修改</li>
+<li>feature分支：当要开发新功能或者试验新功能时，从develop分支创建一个新的feature分支，并在feature分支上进行开发。开发完成后，需要将该feature分支合并到develop分支，最后删除该feature分支</li>
+<li>release分支：当develop分支上的项目准备发布时，从develop分支上创建一个新的release分支，新建的release分支只能进行质量测试、bug修复、文档生成等面向发布的任务，不能再添加功能。这一系列发布任务完成后，需要将release分支合并到master分支上，并根据版本号为master分支添加tag，然后将release分支创建以来的修改合并回develop分支，最后删除release分支</li>
+<li>hotfix分支：当master分支中的产品出现需要立即修复的bug时，从master分支上创建一个新的hotfix分支，并在hotfix分支上进行bug修复。修复完成后，需要将hotfix分支合并到master分支和develop分支，并为master分支添加新的版本号tag，最后删除hotfix分支</li>
+</ul>
+<p>(gitflow后续更新)</p>
+<h2 id="6-开发人员操作"><a href="#6-开发人员操作" class="headerlink" title="6.开发人员操作"></a>6.开发人员操作</h2><h4 id="6-1-fork项目"><a href="#6-1-fork项目" class="headerlink" title="6.1 fork项目"></a>6.1 fork项目</h4><p>项目成员首先利用浏览器进入gitlab的系统后，查看自己的group和project，并fork自己需要参与开发的project。</p>
+<blockquote>
+<p>注意：fork时，在project的detail界面中点击fork按钮即可</p>
+</blockquote>
+<p>fork时会提示选择<strong>Namespace</strong>，这个选择是用来决定这个工程所属的，可以选Users,或者选择Groups，这个会影响到后面工程的url，项目成员都统一选择users本人的命名空间就可以了。</p>
+<h4 id="6-2-设置账户信息"><a href="#6-2-设置账户信息" class="headerlink" title="6.2 设置账户信息"></a>6.2 设置账户信息</h4><p>设置修改本地对应的gitlab用户和邮箱。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#修改用户名和邮箱的命令</span><br><span class="line">git config --global user.name &quot;llnpython&quot;</span><br><span class="line">git config --global user.email &quot;llnpython@gitlab.com&quot;</span><br><span class="line"></span><br><span class="line">#可以选择不设置全局的，而是临时的，但必须在一个 本地repository目录下：</span><br><span class="line">git config --local  user.name &quot;llnpython&quot;</span><br><span class="line">git config --local user.email &quot;llnpython@gitlab.com&quot;</span><br><span class="line"></span><br><span class="line">#查看用户名和邮箱</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+<h4 id="6-3正常代码更新提交"><a href="#6-3正常代码更新提交" class="headerlink" title="6.3正常代码更新提交"></a>6.3正常代码更新提交</h4><p>请移步：<a href="https://handsome-man.github.io/05-git/0-git/#more" target="_blank" rel="noopener">git常用命令</a></p>
+<h4 id="6-4-同步最新master库内容"><a href="#6-4-同步最新master库内容" class="headerlink" title="6.4 同步最新master库内容"></a>6.4 同步最新master库内容</h4><p>fork后的项目不会自动从master主分支获取更新，需要负责fork的开发人员自己更新版本</p>
+<p>如何更新已经fork的代码：</p>
+<ul>
+<li>首先要先确定一下是否建立了主repo的远程源：</li>
+</ul>
+<p>在本地项目库下执行 <code>git remote -v</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">☁  gitlab_test [master] git remote -v</span><br><span class="line">origin	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (fetch)</span><br><span class="line">origin	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (push)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果里面只能看到你自己的两个源(fetch 和 push)，那就需要添加主repo的源：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">☁  gitlab_test [master] git remote add upstream https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git</span><br><span class="line">☁  gitlab_test [master] git remote -v</span><br><span class="line">origin	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (fetch)</span><br><span class="line">origin	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (push)</span><br><span class="line">upstream	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (fetch)</span><br><span class="line">upstream	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (push)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>fetch源分支的新版本到本地</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git fetch upstream</span><br></pre></td></tr></table></figure>
+
+<p>执行后本地库的内容会更新为与master库一致的内容</p>
+<ul>
+<li>合并本地两个版本的代码：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git merge upstream&#x2F;master</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将在本地合并后的代码push到自己的github上去，以更新github上fork的仓库</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>执行后网页端的仓库内容更新为合并后的新版本</p>
+<h4 id="项目流程"><a href="#项目流程" class="headerlink" title="项目流程"></a>项目流程</h4><ol>
+<li><p>项目组长建立仓库 git flow init</p>
+</li>
+<li><p>成员进行了clone git clone</p>
+</li>
+<li><p>项目组长分配里程碑与议题(任务)</p>
+</li>
+<li><p>项目成员根据自己被分配到的任务建立对应的分支git flow feature start xxx</p>
+</li>
+</ol>
+<ul>
+<li>先在项目中建立分支，再拉取开发</li>
+<li>先在本地建立分支，再提交</li>
+</ul>
+<ol start="5">
+<li>完成任务后提交pull request git push origin</li>
+<li>Pull request删除分支，关闭对应的议题任务 git flow feature finish xxx</li>
+</ol>
+<h2 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h2><ul>
+<li><p><a href="https://blog.csdn.net/ocean1010/article/details/103778497" target="_blank" rel="noopener">git github gitlab gitflow 区别</a></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/4b2d9d0f2713" target="_blank" rel="noopener">gitlab使用详解</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>gitlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git(一)：git常用命令</title>
     <url>/05-git/0-git/</url>
     <content><![CDATA[<h4 id="git远程操作管理"><a href="#git远程操作管理" class="headerlink" title="git远程操作管理"></a>git远程操作管理</h4><p><img src="git.png" alt="image"></p>
@@ -200,94 +316,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>个人博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git(二)：gitlab的使用</title>
-    <url>/05-git/gitlab/</url>
-    <content><![CDATA[<h2 id="1-gitlab注册"><a href="#1-gitlab注册" class="headerlink" title="1.gitlab注册"></a>1.gitlab注册</h2><p>注册网址:<a href="https://about.gitlab.com" target="_blank" rel="noopener">https://about.gitlab.com</a></p>
-<p>在注册GitLab的时候总是报错,报错信息如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">There was an error with the reCAPTCHA. Please solve the reCAPTCHA again.</span><br></pre></td></tr></table></figure>
-
-<p>错误原因：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">注册时有一个google的验证码需要输入,但是中国无法访问google,因此无法访问并输入该验证码导致。</span><br></pre></td></tr></table></figure>
-
-<p>解决方案：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用GitHub账号注册，没有的话去注册个github账号</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-创建一个项目"><a href="#2-创建一个项目" class="headerlink" title="2.创建一个项目"></a>2.创建一个项目</h2><ol>
-<li>创建Groups</li>
-</ol>
-<p>Groups ———&gt; New Groups</p>
-<p>填写分组名 ——&gt;选中private ——-&gt; create group</p>
-<ol start="2">
-<li>创建Project</li>
-</ol>
-<p>Projects ——&gt; Your projects ——&gt; Create a project</p>
-<p>填写项目信息 ——&gt; private ——&gt; 勾选readme一项 ——-&gt; Create project</p>
-<h2 id="3-SSH-Keys配置"><a href="#3-SSH-Keys配置" class="headerlink" title="3.SSH Keys配置"></a>3.SSH Keys配置</h2><ol>
-<li>首先要先用自己的电脑生成公钥私钥</li>
-</ol>
-<p>终端输入：ssh-keygen -t rsa - C 自己的邮箱号,一直按enter即可</p>
-<ol start="2">
-<li>把公钥私钥添加SSH Keys</li>
-</ol>
-<p>打开Finder同时按command+shift+G 输入：~/.ssh 进入.ssh文件，打开复制id_rsa.pub到Profile Settings添加SSH Keys，然后添加</p>
-<h2 id="4-首次拉取代码"><a href="#4-首次拉取代码" class="headerlink" title="4.首次拉取代码"></a>4.首次拉取代码</h2><p>由于我是github账号登录的，所以要先设置密码。</p>
-<h4 id="4-1-git"><a href="#4-1-git" class="headerlink" title="4.1 git"></a>4.1 git</h4><p>项目内容获取主要使用git客户端工具来实现，项目开发人员首先要在本机安装git客户端软件，<a href="https://www.git-scm.com/" target="_blank" rel="noopener">下载地址</a></p>
-<h4 id="4-2首次拉取代码"><a href="#4-2首次拉取代码" class="headerlink" title="4.2首次拉取代码"></a>4.2首次拉取代码</h4><p>此间会提示输入帐号密码，帐号是username不是name，按提示输入即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#注意地址是fork后的项目地址</span><br><span class="line">git clone https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-gitflow的使用"><a href="#5-gitflow的使用" class="headerlink" title="5.gitflow的使用"></a>5.gitflow的使用</h2><p>git flow是git的辅助工具，实质上是一些分支-合并的脚本集合，使用git flow可以更轻松的完成对各种特性分支的操作。</p>
-<h4 id="5-1-分支说明"><a href="#5-1-分支说明" class="headerlink" title="5.1 分支说明"></a>5.1 分支说明</h4><ul>
-<li>master分支：存储正式发布的产品，master分支上的产品要求随时处于可部署状态。master分支只能通过与其他分支合并来更新内容，禁止直接在master分支进行修改</li>
-<li>develop分支：汇总开发者完成的工作成果，develop分支上的产品可以是缺失功能模块的半成品，但是已有的功能模块不能是半成品。develop分支只能通过与其他分支合并来更新内容，禁止直接在develop分支进行修改</li>
-<li>feature分支：当要开发新功能或者试验新功能时，从develop分支创建一个新的feature分支，并在feature分支上进行开发。开发完成后，需要将该feature分支合并到develop分支，最后删除该feature分支</li>
-<li>release分支：当develop分支上的项目准备发布时，从develop分支上创建一个新的release分支，新建的release分支只能进行质量测试、bug修复、文档生成等面向发布的任务，不能再添加功能。这一系列发布任务完成后，需要将release分支合并到master分支上，并根据版本号为master分支添加tag，然后将release分支创建以来的修改合并回develop分支，最后删除release分支</li>
-<li>hotfix分支：当master分支中的产品出现需要立即修复的bug时，从master分支上创建一个新的hotfix分支，并在hotfix分支上进行bug修复。修复完成后，需要将hotfix分支合并到master分支和develop分支，并为master分支添加新的版本号tag，最后删除hotfix分支</li>
-</ul>
-<p>(gitflow后续更新)</p>
-<h2 id="6-开发人员操作"><a href="#6-开发人员操作" class="headerlink" title="6.开发人员操作"></a>6.开发人员操作</h2><h4 id="6-1-fork项目"><a href="#6-1-fork项目" class="headerlink" title="6.1 fork项目"></a>6.1 fork项目</h4><p>项目成员首先利用浏览器进入gitlab的系统后，查看自己的group和project，并fork自己需要参与开发的project。</p>
-<blockquote>
-<p>注意：fork时，在project的detail界面中点击fork按钮即可</p>
-</blockquote>
-<p>fork时会提示选择<strong>Namespace</strong>，这个选择是用来决定这个工程所属的，可以选Users,或者选择Groups，这个会影响到后面工程的url，项目成员都统一选择users本人的命名空间就可以了。</p>
-<h4 id="6-2-设置账户信息"><a href="#6-2-设置账户信息" class="headerlink" title="6.2 设置账户信息"></a>6.2 设置账户信息</h4><p>设置修改本地对应的gitlab用户和邮箱。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#修改用户名和邮箱的命令</span><br><span class="line">git config --global user.name &quot;llnpython&quot;</span><br><span class="line">git config --global user.email &quot;llnpython@gitlab.com&quot;</span><br><span class="line"></span><br><span class="line">#可以选择不设置全局的，而是临时的，但必须在一个 本地repository目录下：</span><br><span class="line">git config --local  user.name &quot;llnpython&quot;</span><br><span class="line">git config --local user.email &quot;llnpython@gitlab.com&quot;</span><br><span class="line"></span><br><span class="line">#查看用户名和邮箱</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="项目流程"><a href="#项目流程" class="headerlink" title="项目流程"></a>项目流程</h4><ol>
-<li><p>项目组长建立仓库 git flow init</p>
-</li>
-<li><p>成员进行了clone git clone</p>
-</li>
-<li><p>项目组长分配里程碑与议题(任务)</p>
-</li>
-<li><p>项目成员根据自己被分配到的任务建立对应的分支git flow feature start xxx</p>
-</li>
-</ol>
-<ul>
-<li>先在项目中建立分支，再拉取开发</li>
-<li>现在本地建立分支，再提交</li>
-</ul>
-<ol start="5">
-<li>完成任务后提交pull request git push origin</li>
-<li>Pull request删除分支，关闭对应的议题任务 git flow feature finish xxx</li>
-</ol>
-<h2 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h2><ul>
-<li><p><a href="https://blog.csdn.net/ocean1010/article/details/103778497" target="_blank" rel="noopener">git github gitlab gitflow 区别</a></p>
-</li>
-<li><p><a href="https://www.jianshu.com/p/4b2d9d0f2713" target="_blank" rel="noopener">gitlab使用详解</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>gitlab</tag>
       </tags>
   </entry>
   <entry>
