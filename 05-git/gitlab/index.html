@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="llnpython">
 <meta property="og:description" content="1.gitlab注册注册网址:https:&#x2F;&#x2F;about.gitlab.com 在注册GitLab的时候总是报错,报错信息如下： 1There was an error with the reCAPTCHA. Please solve the reCAPTCHA again.  错误原因： 1注册时有一个google的验证码需要输入,但是中国无法访问google,因此无法访问并输入该验证码导致。">
 <meta property="article:published_time" content="2020-07-12T06:12:15.000Z">
-<meta property="article:modified_time" content="2020-07-12T07:44:09.296Z">
+<meta property="article:modified_time" content="2020-07-12T08:21:49.487Z">
 <meta property="article:author" content="liulunan">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="gitlab">
@@ -423,24 +423,12 @@
 <p>解决方案：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用GitHub账号注册，没有的话去注册个github账号</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-创建一个项目"><a href="#2-创建一个项目" class="headerlink" title="2.创建一个项目"></a>2.创建一个项目</h2><ol>
-<li>创建Groups</li>
-</ol>
-<p>Groups ———&gt; New Groups</p>
+<h2 id="2-创建一个项目"><a href="#2-创建一个项目" class="headerlink" title="2.创建一个项目"></a>2.创建一个项目</h2><h4 id="2-1-创建Groups"><a href="#2-1-创建Groups" class="headerlink" title="2.1 创建Groups"></a>2.1 创建Groups</h4><p>Groups ———&gt; New Groups</p>
 <p>填写分组名 ——&gt;选中private ——-&gt; create group</p>
-<ol start="2">
-<li>创建Project</li>
-</ol>
-<p>Projects ——&gt; Your projects ——&gt; Create a project</p>
+<h4 id="2-2-创建Project"><a href="#2-2-创建Project" class="headerlink" title="2.2 创建Project"></a>2.2 创建Project</h4><p>Projects ——&gt; Your projects ——&gt; Create a project</p>
 <p>填写项目信息 ——&gt; private ——&gt; 勾选readme一项 ——-&gt; Create project</p>
-<h2 id="3-SSH-Keys配置"><a href="#3-SSH-Keys配置" class="headerlink" title="3.SSH Keys配置"></a>3.SSH Keys配置</h2><ol>
-<li>首先要先用自己的电脑生成公钥私钥</li>
-</ol>
-<p>终端输入：ssh-keygen -t rsa - C 自己的邮箱号,一直按enter即可</p>
-<ol start="2">
-<li>把公钥私钥添加SSH Keys</li>
-</ol>
-<p>打开Finder同时按command+shift+G 输入：~/.ssh 进入.ssh文件，打开复制id_rsa.pub到Profile Settings添加SSH Keys，然后添加</p>
+<h2 id="3-SSH-Keys配置"><a href="#3-SSH-Keys配置" class="headerlink" title="3.SSH Keys配置"></a>3.SSH Keys配置</h2><h4 id="3-1-首先要先用自己的电脑生成公钥私钥"><a href="#3-1-首先要先用自己的电脑生成公钥私钥" class="headerlink" title="3.1 首先要先用自己的电脑生成公钥私钥"></a>3.1 首先要先用自己的电脑生成公钥私钥</h4><p>终端输入：ssh-keygen -t rsa - C 自己的邮箱号,一直按enter即可</p>
+<h4 id="3-2-把公钥私钥添加SSH-Keys"><a href="#3-2-把公钥私钥添加SSH-Keys" class="headerlink" title="3.2 把公钥私钥添加SSH Keys"></a>3.2 把公钥私钥添加SSH Keys</h4><p>打开Finder同时按command+shift+G 输入：~/.ssh 进入.ssh文件，打开复制id_rsa.pub到Profile Settings添加SSH Keys，然后添加</p>
 <h2 id="4-首次拉取代码"><a href="#4-首次拉取代码" class="headerlink" title="4.首次拉取代码"></a>4.首次拉取代码</h2><p>由于我是github账号登录的，所以要先设置密码。</p>
 <h4 id="4-1-git"><a href="#4-1-git" class="headerlink" title="4.1 git"></a>4.1 git</h4><p>项目内容获取主要使用git客户端工具来实现，项目开发人员首先要在本机安装git客户端软件，<a href="https://www.git-scm.com/" target="_blank" rel="noopener">下载地址</a></p>
 <h4 id="4-2首次拉取代码"><a href="#4-2首次拉取代码" class="headerlink" title="4.2首次拉取代码"></a>4.2首次拉取代码</h4><p>此间会提示输入帐号密码，帐号是username不是name，按提示输入即可</p>
@@ -493,7 +481,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 
 <p>执行后网页端的仓库内容更新为合并后的新版本</p>
-<h4 id="项目流程"><a href="#项目流程" class="headerlink" title="项目流程"></a>项目流程</h4><ol>
+<h2 id="7-项目流程"><a href="#7-项目流程" class="headerlink" title="7.项目流程"></a>7.项目流程</h2><ol>
 <li><p>项目组长建立仓库 git flow init</p>
 </li>
 <li><p>成员进行了clone git clone</p>
@@ -1050,7 +1038,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-gitlab注册"><span class="nav-text">1.gitlab注册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建一个项目"><span class="nav-text">2.创建一个项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-SSH-Keys配置"><span class="nav-text">3.SSH Keys配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-首次拉取代码"><span class="nav-text">4.首次拉取代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-git"><span class="nav-text">4.1 git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2首次拉取代码"><span class="nav-text">4.2首次拉取代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-gitflow的使用"><span class="nav-text">5.gitflow的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-分支说明"><span class="nav-text">5.1 分支说明</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-开发人员操作"><span class="nav-text">6.开发人员操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-fork项目"><span class="nav-text">6.1 fork项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-设置账户信息"><span class="nav-text">6.2 设置账户信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3正常代码更新提交"><span class="nav-text">6.3正常代码更新提交</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-4-同步最新master库内容"><span class="nav-text">6.4 同步最新master库内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#项目流程"><span class="nav-text">项目流程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考博客"><span class="nav-text">参考博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-gitlab注册"><span class="nav-text">1.gitlab注册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建一个项目"><span class="nav-text">2.创建一个项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-创建Groups"><span class="nav-text">2.1 创建Groups</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-创建Project"><span class="nav-text">2.2 创建Project</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-SSH-Keys配置"><span class="nav-text">3.SSH Keys配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-首先要先用自己的电脑生成公钥私钥"><span class="nav-text">3.1 首先要先用自己的电脑生成公钥私钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-把公钥私钥添加SSH-Keys"><span class="nav-text">3.2 把公钥私钥添加SSH Keys</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-首次拉取代码"><span class="nav-text">4.首次拉取代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-git"><span class="nav-text">4.1 git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2首次拉取代码"><span class="nav-text">4.2首次拉取代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-gitflow的使用"><span class="nav-text">5.gitflow的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-分支说明"><span class="nav-text">5.1 分支说明</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-开发人员操作"><span class="nav-text">6.开发人员操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-fork项目"><span class="nav-text">6.1 fork项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-设置账户信息"><span class="nav-text">6.2 设置账户信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3正常代码更新提交"><span class="nav-text">6.3正常代码更新提交</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-4-同步最新master库内容"><span class="nav-text">6.4 同步最新master库内容</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-项目流程"><span class="nav-text">7.项目流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考博客"><span class="nav-text">参考博客</span></a></li></ol></div>
             
 
           </div>
