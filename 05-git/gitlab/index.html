@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="llnpython">
 <meta property="og:description" content="1.gitlab注册注册网址:https:&#x2F;&#x2F;about.gitlab.com 在注册GitLab的时候总是报错,报错信息如下： 1There was an error with the reCAPTCHA. Please solve the reCAPTCHA again.  错误原因： 1注册时有一个google的验证码需要输入,但是中国无法访问google,因此无法访问并输入该验证码导致。">
 <meta property="article:published_time" content="2020-07-12T06:12:15.000Z">
-<meta property="article:modified_time" content="2020-07-12T08:21:49.487Z">
+<meta property="article:modified_time" content="2020-07-12T15:31:12.566Z">
 <meta property="article:author" content="liulunan">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="gitlab">
@@ -450,38 +450,47 @@
 <p>fork时会提示选择<strong>Namespace</strong>，这个选择是用来决定这个工程所属的，可以选Users,或者选择Groups，这个会影响到后面工程的url，项目成员都统一选择users本人的命名空间就可以了。</p>
 <h4 id="6-2-设置账户信息"><a href="#6-2-设置账户信息" class="headerlink" title="6.2 设置账户信息"></a>6.2 设置账户信息</h4><p>设置修改本地对应的gitlab用户和邮箱。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#修改用户名和邮箱的命令</span><br><span class="line">git config --global user.name &quot;llnpython&quot;</span><br><span class="line">git config --global user.email &quot;llnpython@gitlab.com&quot;</span><br><span class="line"></span><br><span class="line">#可以选择不设置全局的，而是临时的，但必须在一个 本地repository目录下：</span><br><span class="line">git config --local  user.name &quot;llnpython&quot;</span><br><span class="line">git config --local user.email &quot;llnpython@gitlab.com&quot;</span><br><span class="line"></span><br><span class="line">#查看用户名和邮箱</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
-<h4 id="6-3正常代码更新提交"><a href="#6-3正常代码更新提交" class="headerlink" title="6.3正常代码更新提交"></a>6.3正常代码更新提交</h4><p>请移步：<a href="https://handsome-man.github.io/05-git/0-git/#more" target="_blank" rel="noopener">git常用命令</a></p>
-<h4 id="6-4-同步最新master库内容"><a href="#6-4-同步最新master库内容" class="headerlink" title="6.4 同步最新master库内容"></a>6.4 同步最新master库内容</h4><p>fork后的项目不会自动从master主分支获取更新，需要负责fork的开发人员自己更新版本</p>
-<p>如何更新已经fork的代码：</p>
-<ul>
-<li>首先要先确定一下是否建立了主repo的远程源：</li>
-</ul>
-<p>在本地项目库下执行 <code>git remote -v</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">☁  gitlab_test [master] git remote -v</span><br><span class="line">origin	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (fetch)</span><br><span class="line">origin	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (push)</span><br></pre></td></tr></table></figure>
+<h4 id="6-3正常代码更新提交"><a href="#6-3正常代码更新提交" class="headerlink" title="6.3正常代码更新提交"></a>6.3正常代码更新提交</h4><ol>
+<li>commit</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit –am “#XYPJ-1111# message example”</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>如果里面只能看到你自己的两个源(fetch 和 push)，那就需要添加主repo的源：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">☁  gitlab_test [master] git remote add upstream https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git</span><br><span class="line">☁  gitlab_test [master] git remote -v</span><br><span class="line">origin	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (fetch)</span><br><span class="line">origin	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (push)</span><br><span class="line">upstream	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (fetch)</span><br><span class="line">upstream	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (push)</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Fetch同步主仓库与个人远程仓库</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">## 建立本地仓库时，设置本地仓库的upstream为主仓库</span><br><span class="line">git remote add upstream https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git</span><br><span class="line">## 查看remote信息</span><br><span class="line">git remote –v</span><br><span class="line">## 结果类似如下：</span><br><span class="line">origin	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (fetch)</span><br><span class="line">origin	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (push)</span><br><span class="line">upstream	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (fetch)</span><br><span class="line">upstream	https:&#x2F;&#x2F;gitlab.com&#x2F;llnpython&#x2F;gitlab_test.git (push)</span><br><span class="line"> </span><br><span class="line">## 之后代码开发时的操作</span><br><span class="line">## fetch主仓库代码到本地（只是获取，还未合并）</span><br><span class="line">git fetch upstream</span><br><span class="line">##本地代码切换到master分支（如果已经在master分支就跳过这一步），然后合并主仓库的master分支到本地的master分支</span><br><span class="line">git checkout master</span><br><span class="line">git merge upstream&#x2F;master</span><br><span class="line">## 提到代码到个人远程仓库</span><br><span class="line">git push origin master</span><br><span class="line">## 注意：如果是bug修复，则以上fetch&#x2F;merge&#x2F;push都是hotfix分支</span><br></pre></td></tr></table></figure>
 
+<ol start="3">
+<li><p>Merge Request</p>
+<p>登录GitLab，在个人项目主页中，发起Merge Request。如果发起MR时发现有报代码冲突，则可以自己关闭MR，按照上一步的操作解决冲突合并代码后，重新发起MR。</p>
+</li>
+</ol>
+<h2 id="7-协作流程"><a href="#7-协作流程" class="headerlink" title="7.协作流程"></a>7.协作流程</h2><h4 id="7-1开发流程"><a href="#7-1开发流程" class="headerlink" title="7.1开发流程"></a>7.1开发流程</h4><ul>
+<li><p>Master新建代码主仓库MAIN、添加项目成员。</p>
+</li>
+<li><p>Developer从主仓库fork一份到自己的个人远程仓库ORIGIN。</p>
+</li>
+<li><p>Developer从个人远程仓库clone代码到本地，建立本地仓库，同时将主仓库MAIN设置为本地仓库LOCAL的upstream</p>
+</li>
+<li><p>在本地仓库进行开发，需要提交代码时，按照如下步骤：</p>
 <ul>
-<li>fetch源分支的新版本到本地</li>
+<li>Commit：提交代码到本地仓库</li>
+<li>Fetch：获取主仓库的更新，同步到个人本地仓库</li>
+<li>Merge：合并主仓库的代码和本地的开发代码。代码会自动合并，但如果有冲突，需手动合并代码解决冲突</li>
+<li>Push：提交代码到个人远程仓库</li>
+<li>Merge Request：在GitLab的个人主页，发起Merge Request请求将个人远程仓库代码合并到主仓库的对应分支</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch upstream</span><br></pre></td></tr></table></figure>
-
-<p>执行后本地库的内容会更新为与master库一致的内容</p>
+</li>
+<li><p><em>Master</em>处理Merge Request请求，进行code review。如果一切正常，最终合并到主仓库，打Tag上线。如果有问题，则拒绝Merge Request，要求修改。</p>
+</li>
+</ul>
+<h4 id="7-2-Bug修复流程"><a href="#7-2-Bug修复流程" class="headerlink" title="7.2 Bug修复流程"></a>7.2 Bug修复流程</h4><p>  假设是tag v1.0的代码上出现bug需要紧急修复，协作流程如下。</p>
 <ul>
-<li>合并本地两个版本的代码：</li>
+<li>Master合并主仓库的master分支的v0.1至hotfix分支。</li>
+<li>Developer成员拉取主仓库的hotfix分支，按照代码开发的步骤4进行开发。修复完成后提交代码并发起merge request，请求合并个人远程仓库的hotfix分支至主仓库的hotfix分支</li>
+<li>Master成员处理Merge Request请求，进行code review，最终合并hotfix分支至master分支</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge upstream&#x2F;master</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>将在本地合并后的代码push到自己的github上去，以更新github上fork的仓库</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<p>执行后网页端的仓库内容更新为合并后的新版本</p>
-<h2 id="7-项目流程"><a href="#7-项目流程" class="headerlink" title="7.项目流程"></a>7.项目流程</h2><ol>
+<h2 id="8-项目流程"><a href="#8-项目流程" class="headerlink" title="8.项目流程"></a>8.项目流程</h2><ol>
 <li><p>项目组长建立仓库 git flow init</p>
 </li>
 <li><p>成员进行了clone git clone</p>
@@ -1038,7 +1047,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-gitlab注册"><span class="nav-text">1.gitlab注册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建一个项目"><span class="nav-text">2.创建一个项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-创建Groups"><span class="nav-text">2.1 创建Groups</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-创建Project"><span class="nav-text">2.2 创建Project</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-SSH-Keys配置"><span class="nav-text">3.SSH Keys配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-首先要先用自己的电脑生成公钥私钥"><span class="nav-text">3.1 首先要先用自己的电脑生成公钥私钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-把公钥私钥添加SSH-Keys"><span class="nav-text">3.2 把公钥私钥添加SSH Keys</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-首次拉取代码"><span class="nav-text">4.首次拉取代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-git"><span class="nav-text">4.1 git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2首次拉取代码"><span class="nav-text">4.2首次拉取代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-gitflow的使用"><span class="nav-text">5.gitflow的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-分支说明"><span class="nav-text">5.1 分支说明</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-开发人员操作"><span class="nav-text">6.开发人员操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-fork项目"><span class="nav-text">6.1 fork项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-设置账户信息"><span class="nav-text">6.2 设置账户信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3正常代码更新提交"><span class="nav-text">6.3正常代码更新提交</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-4-同步最新master库内容"><span class="nav-text">6.4 同步最新master库内容</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-项目流程"><span class="nav-text">7.项目流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考博客"><span class="nav-text">参考博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-gitlab注册"><span class="nav-text">1.gitlab注册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建一个项目"><span class="nav-text">2.创建一个项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-创建Groups"><span class="nav-text">2.1 创建Groups</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-创建Project"><span class="nav-text">2.2 创建Project</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-SSH-Keys配置"><span class="nav-text">3.SSH Keys配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-首先要先用自己的电脑生成公钥私钥"><span class="nav-text">3.1 首先要先用自己的电脑生成公钥私钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-把公钥私钥添加SSH-Keys"><span class="nav-text">3.2 把公钥私钥添加SSH Keys</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-首次拉取代码"><span class="nav-text">4.首次拉取代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-git"><span class="nav-text">4.1 git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2首次拉取代码"><span class="nav-text">4.2首次拉取代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-gitflow的使用"><span class="nav-text">5.gitflow的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-分支说明"><span class="nav-text">5.1 分支说明</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-开发人员操作"><span class="nav-text">6.开发人员操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-fork项目"><span class="nav-text">6.1 fork项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-设置账户信息"><span class="nav-text">6.2 设置账户信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3正常代码更新提交"><span class="nav-text">6.3正常代码更新提交</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-协作流程"><span class="nav-text">7.协作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1开发流程"><span class="nav-text">7.1开发流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-Bug修复流程"><span class="nav-text">7.2 Bug修复流程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-项目流程"><span class="nav-text">8.项目流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考博客"><span class="nav-text">参考博客</span></a></li></ol></div>
             
 
           </div>
