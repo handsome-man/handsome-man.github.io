@@ -67,6 +67,30 @@
       </tags>
   </entry>
   <entry>
+    <title>python操作excel(一)：openpyxl</title>
+    <url>/01-python/%E6%93%8D%E4%BD%9Cexcel/openpyxl/</url>
+    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install openpyxl</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-创建并保存一个工作簿"><a href="#2-创建并保存一个工作簿" class="headerlink" title="2.创建并保存一个工作簿"></a>2.创建并保存一个工作簿</h2><h3 id="2-1-创建一个工作簿"><a href="#2-1-创建一个工作簿" class="headerlink" title="2.1 创建一个工作簿"></a>2.1 创建一个工作簿</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> Workbook</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#生成一个 Workbook 的实例化对象，wb即代表一个工作簿（一个Excel文件）</span></span><br><span class="line">wb = Workbook()</span><br><span class="line"><span class="comment"># 激活一个工作簿，ws代表wb(工作簿)的一个工作表</span></span><br><span class="line">ws = wb.active</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-写入数据"><a href="#2-2-写入数据" class="headerlink" title="2.2 写入数据"></a>2.2 写入数据</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 加标题</span></span><br><span class="line">ws.title = <span class="string">"Title"</span></span><br><span class="line"><span class="comment"># 修改标签栏的字体颜色</span></span><br><span class="line">ws.sheet_properties.tabColor = <span class="string">"1072BA"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对ws的单个单元格传入数据</span></span><br><span class="line"><span class="comment"># 表头</span></span><br><span class="line">ws[<span class="string">'A1'</span>] = <span class="string">'国家'</span></span><br><span class="line">ws[<span class="string">'B1'</span>] = <span class="string">'首都'</span></span><br><span class="line"><span class="comment"># 数据体</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">'中国'</span>:<span class="string">'北京'</span>,</span><br><span class="line">    <span class="string">'韩国'</span>:<span class="string">'首尔'</span>,</span><br><span class="line">    <span class="string">'日本'</span>:<span class="string">'东京'</span>,</span><br><span class="line">    <span class="string">'泰国'</span>:<span class="string">'曼谷'</span>,</span><br><span class="line">    <span class="string">'马来西亚'</span>:<span class="string">'吉隆坡'</span>,</span><br><span class="line">    <span class="string">'越南'</span>:<span class="string">'河内'</span>,</span><br><span class="line">    <span class="string">'朝鲜'</span>:<span class="string">'平壤'</span>,</span><br><span class="line">    <span class="string">'印度'</span>:<span class="string">'新德里'</span></span><br><span class="line">    &#125;</span><br><span class="line">data_excel = []</span><br><span class="line"><span class="comment">#将字典中的每对数据（键，值）以列表形式传入data_excel列表</span></span><br><span class="line"><span class="keyword">for</span> each <span class="keyword">in</span> data:</span><br><span class="line">    data_excel.append([each, data[each]])</span><br><span class="line"><span class="comment">#将data_excel列表内的内容存入工作表</span></span><br><span class="line"><span class="keyword">for</span> each <span class="keyword">in</span> data_excel:</span><br><span class="line">		ws.append(each)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-保存excel表"><a href="#2-3-保存excel表" class="headerlink" title="2.3 保存excel表"></a>2.3 保存excel表</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">wb.save(<span class="string">'country.xlsx'</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-操作excel"><a href="#3-操作excel" class="headerlink" title="3.操作excel"></a>3.操作excel</h2><h3 id="3-1-打开excel"><a href="#3-1-打开excel" class="headerlink" title="3.1 打开excel"></a>3.1 打开excel</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> load_workbook</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开excel</span></span><br><span class="line">wb = load_workbook(filename)</span><br><span class="line"><span class="comment"># 定位表单</span></span><br><span class="line">sheet = wb[table_name]</span><br></pre></td></tr></table></figure>
+
+<p>(未完待续，时间不够)</p>
+]]></content>
+      <categories>
+        <category>openpyxl</category>
+      </categories>
+      <tags>
+        <tag>openyxl</tag>
+        <tag>python</tag>
+        <tag>excel</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>消息中间件之Kafka(一)：Kafka的基本介绍</title>
     <url>/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/</url>
     <content><![CDATA[<h2 id="1-kafka概述"><a href="#1-kafka概述" class="headerlink" title="1.kafka概述"></a>1.kafka概述</h2><h3 id="1-1定义"><a href="#1-1定义" class="headerlink" title="1.1定义"></a>1.1定义</h3><p>Kafka是一个分布式的基于发布/订阅模式的消息队列，主要用于大数据实时处理领域。</p>
