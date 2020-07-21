@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="openyxl,python,excel," />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -86,19 +86,33 @@
 
 
 
-<meta name="description" content="1.安装1pip install openpyxl  2.创建并保存一个工作簿2.1 创建一个工作簿1234567from openpyxl import Workbook#生成一个 Workbook 的实例化对象，wb即代表一个工作簿（一个Excel文件）wb &#x3D; Workbook()# 激活一个工作簿，ws代表wb(工作簿)的一个工作表ws &#x3D; wb.active  2.2 写入数据12345">
+<meta name="description" content="Linux系统进程管理 进程介绍 进程管理 进程优先级  1.进程介绍什么是进程？12Linux系统中的几乎任何行动都会以进程的形式进行。如果你用网络浏览器查看网页，浏览器就作为进程运行。如果键入bash shell的命令行，这个shell就作为进程运行。如果你用chmod命令来更改文件权限，chmod就作为单独的进程来执行。进程是完成工作的形式，linux内核的基本职责就是为进程提供做事情的地方">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python操作excel(一)：openpyxl">
-<meta property="og:url" content="htts://hand-some.github.io/01-python/操作excel/openpyxl/index.html">
+<meta property="og:title" content="linux(五)：linux系统进程管理">
+<meta property="og:url" content="htts://hand-some.github.io/Linux/linux进程管理/index.html">
 <meta property="og:site_name" content="llnpython">
-<meta property="og:description" content="1.安装1pip install openpyxl  2.创建并保存一个工作簿2.1 创建一个工作簿1234567from openpyxl import Workbook#生成一个 Workbook 的实例化对象，wb即代表一个工作簿（一个Excel文件）wb &#x3D; Workbook()# 激活一个工作簿，ws代表wb(工作簿)的一个工作表ws &#x3D; wb.active  2.2 写入数据12345">
-<meta property="article:published_time" content="2020-07-20T15:55:15.000Z">
-<meta property="article:modified_time" content="2020-07-20T15:56:06.286Z">
+<meta property="og:description" content="Linux系统进程管理 进程介绍 进程管理 进程优先级  1.进程介绍什么是进程？12Linux系统中的几乎任何行动都会以进程的形式进行。如果你用网络浏览器查看网页，浏览器就作为进程运行。如果键入bash shell的命令行，这个shell就作为进程运行。如果你用chmod命令来更改文件权限，chmod就作为单独的进程来执行。进程是完成工作的形式，linux内核的基本职责就是为进程提供做事情的地方">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210952_64.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210953_803.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210953_984.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210953_292.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210954_995.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210954_435.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210955_617.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210955_510.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210955_77.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210955_60.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210956_380.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210956_321.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210956_876.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210956_8.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210957_254.png">
+<meta property="article:published_time" content="2020-07-21T15:19:15.000Z">
+<meta property="article:modified_time" content="2020-07-21T15:22:17.789Z">
 <meta property="article:author" content="liulunan">
-<meta property="article:tag" content="openyxl">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="excel">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://static.open-open.com/lib/uploadImg/20141203/20141203210952_64.png">
 
 
 
@@ -128,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="htts://hand-some.github.io/01-python/操作excel/openpyxl/"/>
+  <link rel="canonical" href="htts://hand-some.github.io/Linux/linux进程管理/"/>
 
 
 
 
 
-  <title>python操作excel(一)：openpyxl | llnpython</title>
+  <title>linux(五)：linux系统进程管理 | llnpython</title>
   
 
 
@@ -307,7 +321,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="htts://hand-some.github.io/01-python/%E6%93%8D%E4%BD%9Cexcel/openpyxl/">
+    <link itemprop="mainEntityOfPage" href="htts://hand-some.github.io/Linux/linux%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liulunan">
@@ -324,7 +338,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python操作excel(一)：openpyxl</h1>
+          <h1 class="post-title" itemprop="name headline">linux(五)：linux系统进程管理</h1>
         
 
         <div class="post-meta">
@@ -339,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-20T23:55:15+08:00">
-                2020-07-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-21T23:19:15+08:00">
+                2020-07-21
               </time>
             
 
@@ -362,8 +376,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/openpyxl/" itemprop="url" rel="index">
-                    <span itemprop="name">openpyxl</span>
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
                   </a>
                 </span>
 
@@ -380,8 +394,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/01-python/%E6%93%8D%E4%BD%9Cexcel/openpyxl/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/01-python/%E6%93%8D%E4%BD%9Cexcel/openpyxl/" itemprop="commentCount"></span>
+                <a href="/Linux/linux%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Linux/linux%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -414,17 +428,116 @@
       
 
       
-        <h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install openpyxl</span><br></pre></td></tr></table></figure>
+        <h1 id="Linux系统进程管理"><a href="#Linux系统进程管理" class="headerlink" title="Linux系统进程管理"></a>Linux系统进程管理</h1><ul>
+<li>进程介绍</li>
+<li>进程管理</li>
+<li>进程优先级</li>
+</ul>
+<h2 id="1-进程介绍"><a href="#1-进程介绍" class="headerlink" title="1.进程介绍"></a>1.进程介绍</h2><h4 id="什么是进程？"><a href="#什么是进程？" class="headerlink" title="什么是进程？"></a>什么是进程？</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Linux系统中的几乎任何行动都会以进程的形式进行。如果你用网络浏览器查看网页，浏览器就作为进程运行。如果键入bash shell的命令行，这个shell就作为进程运行。如果你</span><br><span class="line">用chmod命令来更改文件权限，chmod就作为单独的进程来执行。进程是完成工作的形式，linux内核的基本职责就是为进程提供做事情的地方，不让彼此撞车。</span><br></pre></td></tr></table></figure>
+<h4 id="进程组成"><a href="#进程组成" class="headerlink" title="进程组成"></a>进程组成</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">进程是已启动的可执进程序的运行实例，进程有以下组成部分:</span><br><span class="line">1.已分配内存的地址空间</span><br><span class="line">2.安全属性，包括所有权凭据个特权</span><br><span class="line">3.程序代码的一个或多个执行进程</span><br><span class="line">4.进程状态</span><br></pre></td></tr></table></figure>
+<h4 id="进程与程序区分"><a href="#进程与程序区分" class="headerlink" title="进程与程序区分"></a>进程与程序区分</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">程序：二进制文件，静态。</span><br><span class="line"></span><br><span class="line">进程：是程序运行的过程，动态，有生命周期及运行状态</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">进程（Process）是一个程序在其自身的虚拟地址空间中的一次执行活动。之所以要创建进程，就是为了使多个程序可以并发的执行，从而提高系统的资源利用率和吞吐量。</span><br><span class="line"></span><br><span class="line">程序只是一个静态的指令集合；而进程是一个程序的动态执行过程，它具有生命期，是动态的产生和消亡的。</span><br></pre></td></tr></table></figure>
+<p>ps top gnome-system-monitor pstree linux并发执行 jobs fg bg crtl+z at crontab</p>
+<h4 id="进程家族"><a href="#进程家族" class="headerlink" title="进程家族"></a>进程家族</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">引导系统时，Linux内核的一个职责是启动第一个进程（通常是&#x2F;sbin&#x2F;init）。因为一个业已存在的进程继续派生，所有其他进程得以启动。</span><br></pre></td></tr></table></figure>
+<h4 id="进程的属性："><a href="#进程的属性：" class="headerlink" title="进程的属性："></a>进程的属性：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.进程ID（PID）：是唯一的值，用来区分进程</span><br><span class="line">2.父进程（PPID）</span><br><span class="line">3.启动进程的用户ID（UID）和所归属的组（GID）</span><br><span class="line">4.进程状态：分为运行R，休眠S，僵尸Z</span><br><span class="line">5.进程执行的优先级</span><br><span class="line">6.进程所连接的终端名</span><br><span class="line">7.进程资源占用：如内存、CPU等</span><br></pre></td></tr></table></figure>
+<h4 id="如何终止进程"><a href="#如何终止进程" class="headerlink" title="如何终止进程"></a>如何终止进程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当进程终止时，可能是通过选择退出（exit）正常终止，也可以是因为接收到信号而非正常终止。</span><br></pre></td></tr></table></figure>
+<h4 id="孤儿进程"><a href="#孤儿进程" class="headerlink" title="孤儿进程"></a>孤儿进程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果说处理子进程终止后的善后事宜是父进程的职责的话，那么如果</span><br><span class="line">父进程在子进程之前终止该怎么办？这个子进程就变成了孤儿进程。</span><br></pre></td></tr></table></figure>
+<h4 id="僵尸进程"><a href="#僵尸进程" class="headerlink" title="僵尸进程"></a>僵尸进程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">当进程退出，释放大多数资源和它的父进程收集它的返回值、释放剩余资源这两段时间之间，子进程处于一个特殊状态，被称为僵尸进程（zombie）。</span><br><span class="line">每个进程都会经过一个短暂的僵尸状态。</span><br></pre></td></tr></table></figure>
+<h4 id="五种进程状态"><a href="#五种进程状态" class="headerlink" title="五种进程状态"></a>五种进程状态</h4><ul>
+<li>可运行（R）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">处于可运行状态的进程，一旦有机会，就会访问CPU。多个进程可以（而且经常）处于可以运行状态，</span><br><span class="line">但是因为在任何给定时间内只有一个进程可以在CPU上运行，所以实际上这些进程中只有一个在任何给定的实例上运行。</span><br></pre></td></tr></table></figure></li>
+<li>自愿（可中断的）睡眠（s）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">从名称中可以看出，处于自愿睡眠状态的进程选择处于该状态。通常，这一进程在某事发生之前无事可做。</span><br></pre></td></tr></table></figure></li>
+<li>非自愿（不可中断或强制）睡眠(D)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">内核迫使进程进入非自愿睡眠状态。该进程并没有选择休眠，它情愿运行以便做完事情。当资源被释放时，内核会唤醒进程并将设置为可运行状态。</span><br></pre></td></tr></table></figure></li>
+<li>停止的（挂起的）进程（T）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用户有时决定挂起进程，被挂起的进程在被用户重新启动前不会执行任何操作。</span><br></pre></td></tr></table></figure></li>
+<li>僵尸进程（Z）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">每个快要终止的进程会经历一个短暂的僵尸状态，然而有时有些进程会一直停留在僵尸状态。</span><br></pre></td></tr></table></figure>
+<h2 id="2-进程管理"><a href="#2-进程管理" class="headerlink" title="2.进程管理"></a>2.进程管理</h2><h4 id="1-gt-who"><a href="#1-gt-who" class="headerlink" title="1&gt;who"></a>1&gt;who</h4>查看当前在线用户的情况<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[kevin@localhost linux_study]$ who</span><br><span class="line">kevin    :0           2019-06-03 14:32 (:0)</span><br><span class="line">kevin    pts&#x2F;0        2019-06-03 14:34 (:0)</span><br><span class="line">kevin    pts&#x2F;1        2019-06-03 15:39 (:0)</span><br><span class="line"></span><br><span class="line"># kevin是登录的用户名</span><br><span class="line"># :0，pts&#x2F;0 ，pts&#x2F;1 使用的设备终端(pts)</span><br><span class="line"># 2019-06-03登录到系统的时间</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong><em>tty设备：</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tty1 - tty6表示文字界面(快捷键：ctrl + alt + [F1-F6])</span><br><span class="line">tty7 图形界面(快捷键：ctrl +　alt + F7)</span><br></pre></td></tr></table></figure>
+<h4 id="2-gt-ps"><a href="#2-gt-ps" class="headerlink" title="2&gt;ps"></a>2&gt;ps</h4><p>作用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">查看整个系统内部所运行的进程状况</span><br></pre></td></tr></table></figure>
+<p>涉及的参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># aux解析</span><br><span class="line">a:(all)当前系统所有用户的进程</span><br><span class="line">u:查看进程所有者及其他一些信息</span><br><span class="line">x:显示没有控制终端的进程 -- 不能与用户进行交互的进程【输入、输出】</span><br></pre></td></tr></table></figure>
+<p>显示当前用户下所有进程：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[kevin@localhost ~]$ ps aux</span><br><span class="line">USER        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND</span><br><span class="line">root          1  0.2  0.0 128256  6908 ?        Ss   16:40   0:01 &#x2F;usr&#x2F;lib&#x2F;syste</span><br><span class="line">root          2  0.0  0.0      0     0 ?        S    16:40   0:00 [kthreadd]</span><br><span class="line">root          3  0.0  0.0      0     0 ?        S    16:40   0:00 [ksoftirqd&#x2F;0]</span><br><span class="line">root          5  0.0  0.0      0     0 ?        S&lt;   16:40   0:00 [kworker&#x2F;0:0H]</span><br><span class="line">root          7  0.0  0.0      0     0 ?        S    16:40   0:00 [migration&#x2F;0]</span><br><span class="line">root          8  0.0  0.0      0     0 ?        S    16:40   0:00 [rcu_bh]</span><br><span class="line">root          9  0.1  0.0      0     0 ?        R    16:40   0:00 [rcu_sched]</span><br><span class="line">root         10  0.0  0.0      0     0 ?        S&lt;   16:40   0:00 [lru-add-drain</span><br><span class="line">root         11  0.0  0.0      0     0 ?        S    16:40   0:00 [watchdog&#x2F;0]</span><br><span class="line">root         13  0.0  0.0      0     0 ?        S    16:40   0:00 [kdevtmpfs]</span><br><span class="line">root         14  0.0  0.0      0     0 ?        S&lt;   16:40   0:00 [netns]</span><br><span class="line">root         15  0.0  0.0      0     0 ?        S    16:40   0:00 [khungtaskd]</span><br><span class="line">root         16  0.0  0.0      0     0 ?        S&lt;   16:40   0:00 [writeback]</span><br><span class="line">root         17  0.0  0.0      0     0 ?        S&lt;   16:40   0:00 [kintegrityd]</span><br><span class="line">root         18  0.0  0.0      0     0 ?        S&lt;   16:40   0:00 [bioset]</span><br><span class="line">root         19  0.0  0.0      0     0 ?        S&lt;   16:40   0:00 [bioset]</span><br><span class="line">root         20  0.0  0.0      0     0 ?        S&lt;   16:40   0:00 [bioset]</span><br><span class="line">root         21  0.0  0.0      0     0 ?        S&lt;   16:40   0:00 [kblockd]</span><br></pre></td></tr></table></figure>
+<p>对显示的进程过滤：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ps aux | grep xxx</span><br><span class="line"></span><br><span class="line"># 案例：</span><br><span class="line">[kevin@localhost ~]$ ps aux | grep kevin</span><br><span class="line">kevin     11445  0.0  0.0 317548  4140 ?        Sl   16:50   0:00 &#x2F;usr&#x2F;bin&#x2F;gnome-keyring-daemon --daemonize --login</span><br><span class="line">kevin     11457  0.0  0.1 819180  9628 ?        Ssl  16:50   0:00 &#x2F;usr&#x2F;libexec&#x2F;gnome-session-binary --session gnome-classic</span><br><span class="line">kevin     11474  0.0  0.0  58892   968 ?        S    16:50   0:00 dbus-launch --sh-syntax --exit-with-session</span><br><span class="line"></span><br><span class="line"># grep查询是需要占用一个进程的，所有结果 &gt; 2 才能说明查询结果存在</span><br><span class="line"># 如果结果有一条，表示没有查询的进程</span><br><span class="line"># 查询结果中PID表示进程ID</span><br></pre></td></tr></table></figure>
+<h4 id="3-gt-kill"><a href="#3-gt-kill" class="headerlink" title="3&gt;kill"></a>3&gt;kill</h4><p>作用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用来终止指定的进程（terminate a process）的运行</span><br></pre></td></tr></table></figure>
+<p>查看信号编号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">kill -l</span><br><span class="line"></span><br><span class="line"># 案例</span><br><span class="line">[kevin@localhost ~]$ kill -l</span><br><span class="line"> 1) SIGHUP	 2) SIGINT	 3) SIGQUIT	 4) SIGILL	 5) SIGTRAP</span><br><span class="line"> 6) SIGABRT	 7) SIGBUS	 8) SIGFPE	 9) SIGKILL	10) SIGUSR1</span><br><span class="line">11) SIGSEGV	12) SIGUSR2	13) SIGPIPE	14) SIGALRM	15) SIGTERM</span><br><span class="line">16) SIGSTKFLT	17) SIGCHLD	18) SIGCONT	19) SIGSTOP	20) SIGTSTP</span><br><span class="line">21) SIGTTIN	22) SIGTTOU	23) SIGURG	24) SIGXCPU	25) SIGXFSZ</span><br><span class="line">26) SIGVTALRM	27) SIGPROF	28) SIGWINCH	29) SIGIO	30) SIGPWR</span><br><span class="line">31) SIGSYS	34) SIGRTMIN	35) SIGRTMIN+1	36) SIGRTMIN+2	37) SIGRTMIN+3</span><br><span class="line">38) SIGRTMIN+4	39) SIGRTMIN+5	40) SIGRTMIN+6	41) SIGRTMIN+7	42) SIGRTMIN+8</span><br><span class="line">43) SIGRTMIN+9	44) SIGRTMIN+10	45) SIGRTMIN+11	46) SIGRTMIN+12	47) SIGRTMIN+13</span><br><span class="line">48) SIGRTMIN+14	49) SIGRTMIN+15	50) SIGRTMAX-14	51) SIGRTMAX-13	52) SIGRTMAX-12</span><br><span class="line">53) SIGRTMAX-11	54) SIGRTMAX-10	55) SIGRTMAX-9	56) SIGRTMAX-8	57) SIGRTMAX-7</span><br><span class="line">58) SIGRTMAX-6	59) SIGRTMAX-5	60) SIGRTMAX-4	61) SIGRTMAX-3	62) SIGRTMAX-2</span><br><span class="line">63) SIGRTMAX-1	64) SIGRTMAX</span><br></pre></td></tr></table></figure>
+<p>杀死进程：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -9 PID(进程标识号)</span><br></pre></td></tr></table></figure>
+<h4 id="4-gt-env"><a href="#4-gt-env" class="headerlink" title="4&gt;env"></a>4&gt;env</h4><p>作用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">查看当前进程环境变量</span><br></pre></td></tr></table></figure>
+<p>环境变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当前系统下用户的配置路径信息</span><br><span class="line">格式为键值对：key&#x3D;value：value  （多个值之间用 ： 分隔）</span><br><span class="line">PATH：该环境变量中记录着shell命令解析器去查找命令的目录位置，从前往后的顺序查找</span><br></pre></td></tr></table></figure>
+<p>实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">XDG_VTNR&#x3D;1</span><br><span class="line">SSH_AGENT_PID&#x3D;11646</span><br><span class="line">XDG_SESSION_ID&#x3D;2</span><br><span class="line">HOSTNAME&#x3D;localhost.localdomain</span><br><span class="line">IMSETTINGS_INTEGRATE_DESKTOP&#x3D;yes</span><br><span class="line">VTE_VERSION&#x3D;5202</span><br><span class="line">TERM&#x3D;xterm-256color</span><br><span class="line">SHELL&#x3D;&#x2F;bin&#x2F;bash</span><br><span class="line">XDG_MENU_PREFIX&#x3D;gnome-</span><br><span class="line">HISTSIZE&#x3D;1000</span><br><span class="line">GJS_DEBUG_OUTPUT&#x3D;stderr</span><br><span class="line">GNOME_TERMINAL_SCREEN&#x3D;&#x2F;org&#x2F;gnome&#x2F;Terminal&#x2F;screen&#x2F;a9e74588_a45a_49d7_8c6a_741c484a4777</span><br><span class="line">GJS_DEBUG_TOPICS&#x3D;JS ERROR;JS LOG</span><br><span class="line">IMSETTINGS_MODULE&#x3D;IBus</span><br><span class="line">USER&#x3D;kevin</span><br><span class="line">LS_COLORS&#x3D;rs&#x3D;0:di&#x3D;38;5;27:ln&#x3D;38;5;51:mh&#x3D;44;38;5;15:pi&#x3D;40;38;5;11:so&#x3D;38;5;13:do&#x3D;38;5;5:bd&#x3D;48;5;232;38;5;11:cd&#x3D;48;5;232;38;5;3:or&#x3D;48;5;232;38;5;9:mi&#x3D;05;48;5;232;38;5;15:su&#x3D;48;5;196;38;5;15:sg&#x3D;48;5;11;38;5;16:ca&#x3D;48;5;196;38;5;226:tw&#x3D;48;5;10;38;5;16:ow&#x3D;48;5;10;38;5;21:st&#x3D;48;5;21;38;5;15:ex&#x3D;38;5;34:*.tar&#x3D;38;5;9:*.tgz&#x3D;38;5;9:*.arc&#x3D;38;5;9:*.arj&#x3D;38;5;9:*.taz&#x3D;38;5;9:*.lha&#x3D;38;5;9:*.lz4&#x3D;38;5;9:*.lzh&#x3D;38;5;9:*.lzma&#x3D;38;5;9:*.tlz&#x3D;38;5;9:*.txz&#x3D;38;5;9:*.tzo&#x3D;38;5;9:*.t7z&#x3D;38;5;9:*.zip&#x3D;38;5;9:*.z&#x3D;38;5;9:*.Z&#x3D;38;5;9:*.dz&#x3D;38;5;9:*.gz&#x3D;38;5;9:*.lrz&#x3D;38;5;9:*.lz&#x3D;38;5;9:*.lzo&#x3D;38;5;9:*.xz&#x3D;38;5;9:*.bz2&#x3D;38;5;9:*.bz&#x3D;38;5;9:*.tbz&#x3D;38;5;9:*.tbz2&#x3D;38;5;9:*.tz&#x3D;38;5;9:*.deb&#x3D;38;5;9:*.rpm&#x3D;38;5;9:*.jar&#x3D;38;5;9:*.war&#x3D;38;5;9:*.ear&#x3D;38;5;9:*.sar&#x3D;38;5;9:*.rar&#x3D;38;5;9:*.alz&#x3D;38;5;9:*.ace&#x3D;38;5;9:*.zoo&#x3D;38;5;9:*.cpio&#x3D;38;5;9:*.7z&#x3D;38;5;9:*.rz&#x3D;38;5;9:*.cab&#x3D;38;5;9:*.jpg&#x3D;38;5;13:*.jpeg&#x3D;38;5;13:*.gif&#x3D;38;5;13:*.bmp&#x3D;38;5;13:*.pbm&#x3D;38;5;13:*.pgm&#x3D;38;5;13:*.ppm&#x3D;38;5;13:*.tga&#x3D;38;5;13:*.xbm&#x3D;38;5;13:*.xpm&#x3D;38;5;13:*.tif&#x3D;38;5;13:*.tiff&#x3D;38;5;13:*.png&#x3D;38;5;13:*.svg&#x3D;38;5;13:*.svgz&#x3D;38;5;13:*.mng&#x3D;38;5;13:*.pcx&#x3D;38;5;13:*.mov&#x3D;38;5;13:*.mpg&#x3D;38;5;13:*.mpeg&#x3D;38;5;13:*.m2v&#x3D;38;5;13:*.mkv&#x3D;38;5;13:*.webm&#x3D;38;5;13:*.ogm&#x3D;38;5;13:*.mp4&#x3D;38;5;13:*.m4v&#x3D;38;5;13:*.mp4v&#x3D;38;5;13:*.vob&#x3D;38;5;13:*.qt&#x3D;38;5;13:*.nuv&#x3D;38;5;13:*.wmv&#x3D;38;5;13:*.asf&#x3D;38;5;13:*.rm&#x3D;38;5;13:*.rmvb&#x3D;38;5;13:*.flc&#x3D;38;5;13:*.avi&#x3D;38;5;13:*.fli&#x3D;38;5;13:*.flv&#x3D;38;5;13:*.gl&#x3D;38;5;13:*.dl&#x3D;38;5;13:*.xcf&#x3D;38;5;13:*.xwd&#x3D;38;5;13:*.yuv&#x3D;38;5;13:*.cgm&#x3D;38;5;13:*.emf&#x3D;38;5;13:*.axv&#x3D;38;5;13:*.anx&#x3D;38;5;13:*.ogv&#x3D;38;5;13:*.ogx&#x3D;38;5;13:*.aac&#x3D;38;5;45:*.au&#x3D;38;5;45:*.flac&#x3D;38;5;45:*.mid&#x3D;38;5;45:*.midi&#x3D;38;5;45:*.mka&#x3D;38;5;45:*.mp3&#x3D;38;5;45:*.mpc&#x3D;38;5;45:*.ogg&#x3D;38;5;45:*.ra&#x3D;38;5;45:*.wav&#x3D;38;5;45:*.axa&#x3D;38;5;45:*.oga&#x3D;38;5;45:*.spx&#x3D;38;5;45:*.xspf&#x3D;38;5;45:</span><br><span class="line">GNOME_TERMINAL_SERVICE&#x3D;:1.102</span><br><span class="line">SSH_AUTH_SOCK&#x3D;&#x2F;run&#x2F;user&#x2F;1000&#x2F;keyring&#x2F;ssh</span><br><span class="line">SESSION_MANAGER&#x3D;local&#x2F;unix:@&#x2F;tmp&#x2F;.ICE-unix&#x2F;11457,unix&#x2F;unix:&#x2F;tmp&#x2F;.ICE-unix&#x2F;11457</span><br><span class="line">USERNAME&#x3D;kevin</span><br><span class="line">GNOME_SHELL_SESSION_MODE&#x3D;classic</span><br><span class="line">PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;bin:&#x2F;usr&#x2F;sbin:&#x2F;bin:&#x2F;sbin:&#x2F;home&#x2F;kevin&#x2F;.local&#x2F;bin:&#x2F;home&#x2F;kevin&#x2F;bin</span><br><span class="line">MAIL&#x3D;&#x2F;var&#x2F;spool&#x2F;mail&#x2F;kevin</span><br><span class="line">DESKTOP_SESSION&#x3D;gnome-classic</span><br><span class="line">QT_IM_MODULE&#x3D;xim</span><br><span class="line">XDG_SESSION_TYPE&#x3D;x11</span><br><span class="line">PWD&#x3D;&#x2F;home&#x2F;kevin</span><br><span class="line">XMODIFIERS&#x3D;@im&#x3D;ibus</span><br><span class="line">LANG&#x3D;zh_CN.UTF-8</span><br><span class="line">GDM_LANG&#x3D;zh_CN.UTF-8</span><br><span class="line">GDMSESSION&#x3D;gnome-classic</span><br><span class="line">HISTCONTROL&#x3D;ignoredups</span><br><span class="line">XDG_SEAT&#x3D;seat0</span><br><span class="line">HOME&#x3D;&#x2F;home&#x2F;kevin</span><br><span class="line">SHLVL&#x3D;2</span><br><span class="line">GNOME_DESKTOP_SESSION_ID&#x3D;this-is-deprecated</span><br><span class="line">XDG_SESSION_DESKTOP&#x3D;gnome-classic</span><br><span class="line">LOGNAME&#x3D;kevin</span><br><span class="line">XDG_DATA_DIRS&#x3D;&#x2F;home&#x2F;kevin&#x2F;.local&#x2F;share&#x2F;flatpak&#x2F;exports&#x2F;share&#x2F;:&#x2F;var&#x2F;lib&#x2F;flatpak&#x2F;exports&#x2F;share&#x2F;:&#x2F;usr&#x2F;local&#x2F;share&#x2F;:&#x2F;usr&#x2F;share&#x2F;</span><br><span class="line">DBUS_SESSION_BUS_ADDRESS&#x3D;unix:abstract&#x3D;&#x2F;tmp&#x2F;dbus-Hair4bK8ty,guid&#x3D;8f919aee2ddb3fbb3dbc2db75cf4df58</span><br><span class="line">LESSOPEN&#x3D;||&#x2F;usr&#x2F;bin&#x2F;lesspipe.sh %s</span><br><span class="line">WINDOWPATH&#x3D;1</span><br><span class="line">XDG_RUNTIME_DIR&#x3D;&#x2F;run&#x2F;user&#x2F;1000</span><br><span class="line">DISPLAY&#x3D;:0</span><br><span class="line">XDG_CURRENT_DESKTOP&#x3D;GNOME-Classic:GNOME</span><br><span class="line">COLORTERM&#x3D;truecolor</span><br><span class="line">XAUTHORITY&#x3D;&#x2F;run&#x2F;gdm&#x2F;auth-for-kevin-GOehNB&#x2F;database</span><br><span class="line">_&#x3D;&#x2F;usr&#x2F;bin&#x2F;env</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-创建并保存一个工作簿"><a href="#2-创建并保存一个工作簿" class="headerlink" title="2.创建并保存一个工作簿"></a>2.创建并保存一个工作簿</h2><h3 id="2-1-创建一个工作簿"><a href="#2-1-创建一个工作簿" class="headerlink" title="2.1 创建一个工作簿"></a>2.1 创建一个工作簿</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> Workbook</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#生成一个 Workbook 的实例化对象，wb即代表一个工作簿（一个Excel文件）</span></span><br><span class="line">wb = Workbook()</span><br><span class="line"><span class="comment"># 激活一个工作簿，ws代表wb(工作簿)的一个工作表</span></span><br><span class="line">ws = wb.active</span><br></pre></td></tr></table></figure>
+<h4 id="5-gt-top"><a href="#5-gt-top" class="headerlink" title="5&gt;top"></a>5&gt;top</h4><p>相当于windows下的任务管理器</p>
+<p><strong>安装htop</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install htop</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-2-写入数据"><a href="#2-2-写入数据" class="headerlink" title="2.2 写入数据"></a>2.2 写入数据</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 加标题</span></span><br><span class="line">ws.title = <span class="string">"Title"</span></span><br><span class="line"><span class="comment"># 修改标签栏的字体颜色</span></span><br><span class="line">ws.sheet_properties.tabColor = <span class="string">"1072BA"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对ws的单个单元格传入数据</span></span><br><span class="line"><span class="comment"># 表头</span></span><br><span class="line">ws[<span class="string">'A1'</span>] = <span class="string">'国家'</span></span><br><span class="line">ws[<span class="string">'B1'</span>] = <span class="string">'首都'</span></span><br><span class="line"><span class="comment"># 数据体</span></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">'中国'</span>:<span class="string">'北京'</span>,</span><br><span class="line">    <span class="string">'韩国'</span>:<span class="string">'首尔'</span>,</span><br><span class="line">    <span class="string">'日本'</span>:<span class="string">'东京'</span>,</span><br><span class="line">    <span class="string">'泰国'</span>:<span class="string">'曼谷'</span>,</span><br><span class="line">    <span class="string">'马来西亚'</span>:<span class="string">'吉隆坡'</span>,</span><br><span class="line">    <span class="string">'越南'</span>:<span class="string">'河内'</span>,</span><br><span class="line">    <span class="string">'朝鲜'</span>:<span class="string">'平壤'</span>,</span><br><span class="line">    <span class="string">'印度'</span>:<span class="string">'新德里'</span></span><br><span class="line">    &#125;</span><br><span class="line">data_excel = []</span><br><span class="line"><span class="comment">#将字典中的每对数据（键，值）以列表形式传入data_excel列表</span></span><br><span class="line"><span class="keyword">for</span> each <span class="keyword">in</span> data:</span><br><span class="line">    data_excel.append([each, data[each]])</span><br><span class="line"><span class="comment">#将data_excel列表内的内容存入工作表</span></span><br><span class="line"><span class="keyword">for</span> each <span class="keyword">in</span> data_excel:</span><br><span class="line">		ws.append(each)</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-3-保存excel表"><a href="#2-3-保存excel表" class="headerlink" title="2.3 保存excel表"></a>2.3 保存excel表</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wb.save(<span class="string">'country.xlsx'</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-操作excel"><a href="#3-操作excel" class="headerlink" title="3.操作excel"></a>3.操作excel</h2><h3 id="3-1-打开excel"><a href="#3-1-打开excel" class="headerlink" title="3.1 打开excel"></a>3.1 打开excel</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> load_workbook</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开excel</span></span><br><span class="line">wb = load_workbook(filename)</span><br><span class="line"><span class="comment"># 定位表单</span></span><br><span class="line">sheet = wb[table_name]</span><br></pre></td></tr></table></figure>
-
-<p>(未完待续，时间不够)</p>
+<p><strong>加强版htop:</strong></p>
+<p>效果：</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210952_64.png" alt="image"></p>
+<p>各项从上至下分别说明如下：</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210953_803.png" alt="image"></p>
+<p>左边部分从上至下，分别为，cpu、内存、交换分区的使用情况，右边部分为：Tasks为进程总数，当前运行的进程数、Load average为系统1分钟，5分钟，10分钟的平均负载情况、Uptime为系统运行的时间。</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210953_984.png" alt="image"></p>
+<p>以上各项分别为：</p>
+<ul>
+<li>PID：进行的标识号</li>
+<li>USER：运行此进程的用户</li>
+<li>PRI：进程的优先级</li>
+<li>NI：进程的优先级别值，默认的为0，可以进行调整</li>
+<li>VIRT：进程占用的虚拟内存值</li>
+<li>RES：进程占用的物理内存值</li>
+<li>SHR：进程占用的共享内存值</li>
+<li>S：进程的运行状况，R表示正在运行、S表示休眠，等待唤醒、Z表示僵死状态</li>
+<li>%CPU：该进程占用的CPU使用率</li>
+<li>%MEM：该进程占用的物理内存和总内存的百分比</li>
+<li>TIME+：该进程启动后占用的总的CPU时间</li>
+</ul>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210953_292.png" alt="image"></p>
+<p>==<em>F1：显示帮助信息</em>==</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210954_995.png" alt="image"></p>
+<p>==<em>F2 Htop设定</em>==</p>
+<p>鼠标点击Setup或者按下F2 之后进入htop 设定的页面，</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210954_435.png" alt="image"></p>
+<p>Setup 选项下的：</p>
+<p>1.Meters</p>
+<p>设定顶端的 显示信息，分为左右两侧，Left column 表示左侧的显示的信息，Right column表示右侧显示的信息，如果要新加选项，可以选择Available meters添加，F5新增到上方左侧，F6新增到上方右侧。Left column和Right column下面的选项，可以选定信息的显示方式，有LED、Bar(进度条)、Text(文本模式)，可以根据个人喜好进行设置</p>
+<ol start="2">
+<li>Display options</li>
+</ol>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210955_617.png" alt="image"></p>
+<p>选择要显示的内容，按空格 x表示显示，选择完后，按F10保存选择要显示的内容，按空格 x表示显示，选择完后，按F10保存</p>
+<p>3.Colors</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210955_510.png" alt="image"></p>
+<p>设定界面以什么颜色来显示，个人认为用处不大，各人喜好不同，假如我们选择Black on White后显示效果如下</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210955_77.png" alt="image"></p>
+<p>4.Colums</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210955_60.png" alt="image"></p>
+<p>作用是增加或取消要显示的各项内容，选择后F7(向上移动)、F8(向下移动)、F9(取消显示、F10(保存更改))此处增加了PPID、PGRP，根据各人需求，显示那些信息。</p>
+<p>==<em>F3 搜索进程</em>==</p>
+<p>在界面下按F3或直接输入”/”就可以直接进入搜索模式，是按照进程名进行搜索的。例如</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210956_380.png" alt="image"></p>
+<p>搜索到的进程会用设定的颜色标记出来，方便查看</p>
+<p>==<em>F4：过滤器</em>==</p>
+<p>相当于模糊查找，不区分大小写，下方输入要搜索的内容后，则界面只显示搜索到的内容，更加方便查看，例如：</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210956_321.png" alt="image"></p>
+<p>==<em>F5:以树形方式显示</em>==</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210956_876.png" alt="image"></p>
+<p>==<em>F6：排序方式</em>==</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210956_8.png" alt="image"></p>
+<p>按下F6后会跳转至上图界面，让您选择以什么方式进行排序,在Sort by下选择您要以什么来排序</p>
+<p>==<em>F7,F8：调整进程nice值</em>==</p>
+<p>F7表示减小nice值(增大优先级),F8增大nice值(减小优先级)，选择某一进程，按F7或F8来增大或减小nice值，nice值范围为-20-19，此处我把apache的nice值调整到了19</p>
+<p><img src="http://static.open-open.com/lib/uploadImg/20141203/20141203210957_254.png" alt="image"></p>
+<p>==<em>F9：杀死进程</em>==</p>
+<p>选择某一进程按F9即可杀死此进程，很方便</p>
+<p>==<em>F10:退出htop</em>==</p>
 
       
     </div>
@@ -482,7 +595,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="htts://hand-some.github.io/01-python/操作excel/openpyxl/" title="python操作excel(一)：openpyxl">htts://hand-some.github.io/01-python/操作excel/openpyxl/</a>
+    <a href="htts://hand-some.github.io/Linux/linux进程管理/" title="linux(五)：linux系统进程管理">htts://hand-some.github.io/Linux/linux进程管理/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -502,11 +615,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/openyxl/" rel="tag"><i class="fa fa-tag"></i> openyxl</a>
-          
-            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
-          
-            <a href="/tags/excel/" rel="tag"><i class="fa fa-tag"></i> excel</a>
+            <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
           
         </div>
       
@@ -526,8 +635,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/" rel="next" title="消息中间件之Kafka(一)：Kafka的基本介绍">
-                <i class="fa fa-chevron-left"></i> 消息中间件之Kafka(一)：Kafka的基本介绍
+              <a href="/Linux/%E6%96%87%E4%BB%B6%E5%8F%8A%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90/" rel="next" title="linux(三)：linux文件及文件夹权限">
+                <i class="fa fa-chevron-left"></i> linux(三)：linux文件及文件夹权限
               </a>
             
           </div>
@@ -536,8 +645,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/01-python/python%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4/" rel="prev" title="01-python/python处理时间">
-                01-python/python处理时间 <i class="fa fa-chevron-right"></i>
+              <a href="/Linux/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" rel="prev" title="linux(一)：linux基本命令">
+                linux(一)：linux基本命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -964,7 +1073,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装"><span class="nav-text">1.安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建并保存一个工作簿"><span class="nav-text">2.创建并保存一个工作簿</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-创建一个工作簿"><span class="nav-text">2.1 创建一个工作簿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-写入数据"><span class="nav-text">2.2 写入数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-保存excel表"><span class="nav-text">2.3 保存excel表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-操作excel"><span class="nav-text">3.操作excel</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-打开excel"><span class="nav-text">3.1 打开excel</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux系统进程管理"><span class="nav-text">Linux系统进程管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-进程介绍"><span class="nav-text">1.进程介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是进程？"><span class="nav-text">什么是进程？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程组成"><span class="nav-text">进程组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程与程序区分"><span class="nav-text">进程与程序区分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程家族"><span class="nav-text">进程家族</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程的属性："><span class="nav-text">进程的属性：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何终止进程"><span class="nav-text">如何终止进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#孤儿进程"><span class="nav-text">孤儿进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#僵尸进程"><span class="nav-text">僵尸进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五种进程状态"><span class="nav-text">五种进程状态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-进程管理"><span class="nav-text">2.进程管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-gt-who"><span class="nav-text">1&gt;who</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-gt-ps"><span class="nav-text">2&gt;ps</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-gt-kill"><span class="nav-text">3&gt;kill</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-gt-env"><span class="nav-text">4&gt;env</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-gt-top"><span class="nav-text">5&gt;top</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
