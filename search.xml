@@ -72,11 +72,9 @@
       </tags>
   </entry>
   <entry>
-    <title>docker学习/基本命令</title>
-    <url>/docker%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker pull image_name</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-检查docker状态"><a href="#1-检查docker状态" class="headerlink" title="1. 检查docker状态"></a>1. 检查docker状态</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 查看docker daemon的运行状态</span></span><br><span class="line">ps axf | grep docker</span><br><span class="line"><span class="section"># 查看各个容器信息</span></span><br><span class="line">docker info</span><br><span class="line"><span class="section"># 查看容器配置信息</span></span><br><span class="line">docker inspect 容器名</span><br><span class="line"><span class="section"># 查看容器状态</span></span><br><span class="line">docker ps</span><br><span class="line"><span class="section"># 查看资源状态：CPU、内存</span></span><br><span class="line">docker stats 容器名</span><br><span class="line"></span><br><span class="line">docker top 容器名</span><br><span class="line"><span class="section"># 查看容器日志</span></span><br><span class="line">docker logs -f 容器名</span><br><span class="line"><span class="section"># 查看挂载的卷</span></span><br><span class="line">docker volume ls</span><br><span class="line"><span class="section"># 查看挂载信息</span></span><br><span class="line">docker volume inspect 卷名</span><br><span class="line"><span class="section"># 拷贝文件到容器中---&gt;docker cp ./start.sh a375:/home/mind/model</span></span><br><span class="line">docker cp 主机文件目录 容器名:容器文件目录</span><br></pre></td></tr></table></figure>
+    <title>docker(一)：docker基本命令</title>
+    <url>/docker%E5%AD%A6%E4%B9%A0/docker%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="1-检查docker状态"><a href="#1-检查docker状态" class="headerlink" title="1. 检查docker状态"></a>1. 检查docker状态</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 查看docker daemon的运行状态</span></span><br><span class="line">ps axf | grep docker</span><br><span class="line"><span class="section"># 查看各个容器信息</span></span><br><span class="line">docker info</span><br><span class="line"><span class="section"># 查看容器配置信息</span></span><br><span class="line">docker inspect 容器名</span><br><span class="line"><span class="section"># 查看容器状态</span></span><br><span class="line">docker ps</span><br><span class="line"><span class="section"># 查看资源状态：CPU、内存</span></span><br><span class="line">docker stats 容器名</span><br><span class="line"></span><br><span class="line">docker top 容器名</span><br><span class="line"><span class="section"># 查看容器日志</span></span><br><span class="line">docker logs -f 容器名</span><br><span class="line"><span class="section"># 查看挂载的卷</span></span><br><span class="line">docker volume ls</span><br><span class="line"><span class="section"># 查看挂载信息</span></span><br><span class="line">docker volume inspect 卷名</span><br><span class="line"><span class="section"># 拷贝文件到容器中---&gt;docker cp ./start.sh a375:/home/mind/model</span></span><br><span class="line">docker cp 主机文件目录 容器名:容器文件目录</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-启动docker"><a href="#2-启动docker" class="headerlink" title="2.启动docker"></a>2.启动docker</h2><h4 id="2-1方式一"><a href="#2-1方式一" class="headerlink" title="2.1方式一"></a>2.1方式一</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 启动docker</span></span><br><span class="line">sudo service docker start</span><br><span class="line"><span class="section"># 使docker开机启动</span></span><br><span class="line">sudo chkconfig docker on</span><br><span class="line"><span class="section"># 停止docker服务</span></span><br><span class="line">sudo service docker stop</span><br></pre></td></tr></table></figure>
 
@@ -95,6 +93,12 @@
 
 
 ]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
   </entry>
   <entry>
     <title>03-网络基础/http与https</title>
